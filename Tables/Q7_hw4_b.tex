@@ -1,0 +1,35 @@
+\begin{table}[htbp]\centering
+\small
+\caption{Regression Discontinuity Estimates for the Effect of Exceeding BAC Thresholds on Recidivism}
+\begin{center}
+\begin{threeparttable}
+\begin{tabular}{l*{6}{c}}
+\toprule
+\multicolumn{1}{l}{\textit{Dependent var: }}&
+\multicolumn{1}{c}{\textit{(1)}}&
+\multicolumn{1}{c}{\textit{(2)}}&
+\multicolumn{1}{c}{\textit{(3)}}&
+\multicolumn{1}{c}{\textit{(4)}}&
+\multicolumn{1}{c}{\textit{(5)}}&
+\multicolumn{1}{c}{\textit{(6)}}\\
+\midrule
+dui                 &      -0.022***&      -0.020***&      -0.017** &      -0.022***&      -0.021***&      -0.017** \\
+                    &     (0.006)   &     (0.006)   &     (0.007)   &     (0.006)   &     (0.006)   &     (0.007)   \\
+bac1\_c              &       0.216   &      -0.150   &      -0.150   &       0.188   &      -0.199   &      -0.199   \\
+                    &     (0.201)   &     (0.383)   &     (0.383)   &     (0.201)   &     (0.383)   &     (0.383)   \\
+interaction         &               &       0.523   &      -0.152   &               &       0.552   &      -0.123   \\
+                    &               &     (0.450)   &     (1.071)   &               &     (0.449)   &     (1.070)   \\
+interaction\_sq      &               &               &      25.295   &               &               &      25.287   \\
+                    &               &               &    (36.617)   &               &               &    (36.574)   \\
+\midrule
+N                   &      46,957   &      46,957   &      46,957   &      46,957   &      46,957   &      46,957   \\
+Mean of dependent variable&        0.11   &        0.11   &        0.11   &        0.11   &        0.11   &        0.11   \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\tiny
+\item This table contains regression discontinuity based estimates of the effect of having BAC above the legal thresholds on recidivism based on Hansen (2015). Panel A contains observations with BAC +/-0.5 around the cutoff. Panel B contains observations with BAC +/-0.25 around the cutoff. Heteroskedastic standard errors shown in parenthesis.  * p$<$0.10, ** p$<$0.05, *** p$<$0.01
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+\end{table}
