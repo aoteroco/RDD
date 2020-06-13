@@ -1,0 +1,35 @@
+\begin{table}[htbp]\centering
+\small
+\caption{Regression Discontinuity Estimates for the Effect of Exceeding BAC Thresholds on Recidivism}
+\begin{center}
+\begin{threeparttable}
+\begin{tabular}{l*{6}{c}}
+\toprule
+\multicolumn{1}{l}{\textit{Dependent var: Recidivism }}&
+\multicolumn{1}{c}{\textit{(1)}}&
+\multicolumn{1}{c}{\textit{(2)}}&
+\multicolumn{1}{c}{\textit{(3)}}&
+\multicolumn{1}{c}{\textit{(4)}}&
+\multicolumn{1}{c}{\textit{(5)}}&
+\multicolumn{1}{c}{\textit{(6)}}\\
+\midrule
+dui                 &      -0.027***&      -0.024***&      -0.020***&      -0.027***&      -0.024***&      -0.020***\\
+                    &     (0.004)   &     (0.004)   &     (0.005)   &     (0.004)   &     (0.004)   &     (0.005)   \\
+bac1\_c              &       0.331***&       0.006   &       0.006   &       0.323***&      -0.047   &      -0.047   \\
+                    &     (0.075)   &     (0.187)   &     (0.187)   &     (0.075)   &     (0.187)   &     (0.187)   \\
+interaction         &               &       0.392*  &       0.010   &               &       0.446** &       0.022   \\
+                    &               &     (0.204)   &     (0.385)   &               &     (0.204)   &     (0.385)   \\
+interaction\_sq      &               &               &       7.256   &               &               &       8.059   \\
+                    &               &               &     (6.286)   &               &               &     (6.276)   \\
+\midrule
+N                   &      89,967   &      89,967   &      89,967   &      89,967   &      89,967   &      89,967   \\
+Mean of dependent variable&        0.11   &        0.11   &        0.11   &        0.11   &        0.11   &        0.11   \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\tiny
+\item This table contains regression discontinuity based estimates of the effect of having BAC above the legal thresholds on predetermined  drivers characteristics based on Hansen (2015). Panel A contains observations with BAC +/-0.5 around the cutoff. Panel B contains observations with BAC +/-0.25 around the cutoff.   Heteroskedastic standard errors shown in parenthesis.  * p$<$0.10, ** p$<$0.05, *** p$<$0.01
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+\end{table}
