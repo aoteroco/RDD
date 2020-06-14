@@ -26,7 +26,7 @@ gen interaction= dui*bac1_c
 				cap n estadd ysumm
 				
 				* Column 3: BAC1+interaction+interactionsq
-				cap n reg recidivism dui bac1_c interaction interaction_sq  if (bac1>0.03 & bac1<0.13), robust
+				cap n reg recidivism dui bac1_c bac1_sq interaction interaction_sq  if (bac1>0.03 & bac1<0.13), robust
 				cap n estimates store y3
 				cap n estadd ysumm
 
@@ -42,7 +42,7 @@ gen interaction= dui*bac1_c
 				cap n estadd ysumm
 				
 				* Column 6: BAC1+interaction+interactionsq controls
-				cap n reg recidivism dui bac1_c interaction interaction_sq  male  white aged  if (bac1>0.03 & bac1<0.13), robust
+				cap n reg recidivism dui bac1_c bac1_sq interaction interaction_sq  male  white aged  if (bac1>0.03 & bac1<0.13), robust
 				cap n estimates store y6
 				cap n estadd ysumm
 				
@@ -92,7 +92,7 @@ gen interaction= dui*bac1_c
 				cap n estadd ysumm
 				
 				* Column 3: BAC1+interaction+interactionsq
-				cap n reg recidivism dui bac1_c interaction interaction_sq  if (bac1>0.055 & bac1<0.105), robust
+				cap n reg recidivism dui bac1_c bac1_sq interaction interaction_sq  if (bac1>0.055 & bac1<0.105), robust
 				cap n estimates store y3
 				cap n estadd ysumm
 				
@@ -108,7 +108,7 @@ gen interaction= dui*bac1_c
 				cap n estadd ysumm
 				
 				* Column 6: BAC1+interaction+interactionsq controls
-				cap n reg recidivism dui bac1_c interaction interaction_sq  male  white aged  if (bac1>0.055 & bac1<0.105), robust
+				cap n reg recidivism dui bac1_c bac1_sq interaction interaction_sq  male  white aged  if (bac1>0.055 & bac1<0.105), robust
 				cap n estimates store y6
 				cap n estadd ysumm		
 
