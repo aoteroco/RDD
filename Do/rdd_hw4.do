@@ -61,7 +61,7 @@ gen interaction_sq= dui*bac1_sq
 * Panel A
 reg recidivism dui bac1_c  if (bac1>0.03 & bac1<0.13), robust
 reg recidivism dui bac1_c interaction  if (bac1>0.03 & bac1<0.13), robust
-reg recidivism dui bac1_c interaction interaction_sq  if (bac1>0.03 & bac1<0.13), robust
+reg recidivism dui bac1_c bac1_sq interaction interaction_sq  if (bac1>0.03 & bac1<0.13), robust
 reg recidivism dui bac1_c  male white aged if (bac1>0.03 & bac1<0.13), robust
 reg recidivism dui bac1_c interaction male white aged if (bac1>0.03 & bac1<0.13), robust
 reg recidivism dui bac1_c interaction interaction_sq male white aged if (bac1>0.03 & bac1<0.13), robust
@@ -70,7 +70,7 @@ reg recidivism dui bac1_c interaction interaction_sq male white aged if (bac1>0.
 * Panel B
 reg recidivism dui bac1_c if (bac1>0.055 & bac1<0.105), robust
 reg recidivism dui bac1_c interaction if (bac1>0.055 & bac1<0.105), robust
-reg recidivism dui bac1_c interaction interaction_sq if (bac1>0.055 & bac1<0.105), robust
+reg recidivism dui bac1_c bac1_sq interaction interaction_sq if (bac1>0.055 & bac1<0.105), robust
 reg recidivism dui bac1_c  male  white aged if (bac1>0.055 & bac1<0.105), robust
 reg recidivism dui bac1_c interaction male  white aged if (bac1>0.055 & bac1<0.105), robust
 reg recidivism dui bac1_c interaction interaction_sq male  white aged if (bac1>0.055 & bac1<0.105), robust
