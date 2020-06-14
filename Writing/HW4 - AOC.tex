@@ -154,7 +154,7 @@ N                   &     214,558   &     214,558   &     214,558   &     214,55
  
  \end{itemize}
  
- \item Table \ref{table:mainreg} reports the estimated effect of having BAC over DUI threshold for all the drivers with a BAC within a defined threshold. The results are not identical to Hansen (2015) as we do not have access to all of his covariates, but the coefficient of interest on DUI remains statistically significant and negative. In particular, using a  bandwidth of 0.05 (Panel A), I find that the effect of getting a DUI reduces recidivism between 2.0-2.7 percentage points, depending on the specification of the model. If I use a bandwidth of 0.025, then the effect on recidivism ranges from -1.7 to -2.2 percentage points, depending on the specification of the model. The results are consistent across different bandwidths and are robust to the inclusion of quadratic polynomial and a set of controls like sex, age and race. All the results are very close to what Hansen (2015) finds.
+ \item Table \ref{table:mainreg} reports the estimated effect of having BAC over DUI threshold for all the drivers with a BAC within a defined threshold. The results are not identical to Hansen (2015) as we do not have access to all of his covariates, but the coefficient of interest on DUI remains statistically significant and negative. In particular, using a  bandwidth of 0.05 (Panel A), I find that the effect of getting a DUI reduces recidivism between 1.4-2.7 percentage points, depending on the specification of the model. If I use a bandwidth of 0.025, then the effect on recidivism ranges from -1.4 to -2.2 percentage points, depending on the specification of the model. The results are consistent across different bandwidths and are robust to the inclusion of quadratic polynomial and a set of controls like sex, age and race. All the results are very close to what Hansen (2015) finds.
  
 
 \begin{table}[htbp]\centering
@@ -174,28 +174,32 @@ N                   &     214,558   &     214,558   &     214,558   &     214,55
 \multicolumn{1}{c}{\textit{(6)}}\\
 \midrule
 \textit{Panel A: $BAC \in [0.03, 0.13]$ } & & & & & & \\
-DUI                 &      -0.027***&      -0.024***&      -0.020***&      -0.027***&      -0.024***&      -0.020***\\
-                    &     (0.004)   &     (0.004)   &     (0.005)   &     (0.004)   &     (0.004)   &     (0.005)   \\
-$\tilde{BAC}$              &       0.331***&       0.006   &       0.006   &       0.323***&      -0.047   &      -0.047   \\
-                    &     (0.075)   &     (0.187)   &     (0.187)   &     (0.075)   &     (0.187)   &     (0.187)   \\
-Interaction         &               &       0.392*  &       0.010   &               &       0.446** &       0.022   \\
-                    &               &     (0.204)   &     (0.385)   &               &     (0.204)   &     (0.385)   \\
-Interaction sq.        &               &               &       7.256   &               &               &       8.059   \\
-                    &               &               &     (6.286)   &               &               &     (6.276)   \\
+DUI                 &      -0.027***&      -0.024***&      -0.014** &      -0.027***&      -0.024***&      -0.014** \\
+                    &     (0.004)   &     (0.004)   &     (0.006)   &     (0.004)   &     (0.004)   &     (0.006)   \\
+$\tilde{BAC}$            &       0.331***&       0.006   &      -1.000*  &       0.323***&      -0.047   &      -1.057*  \\
+                    &     (0.075)   &     (0.187)   &     (0.602)   &     (0.075)   &     (0.187)   &     (0.601)   \\
+interaction         &               &       0.392*  &       1.016   &               &       0.446** &       1.032   \\
+                    &               &     (0.204)   &     (0.690)   &               &     (0.204)   &     (0.689)   \\
+$\tilde{BAC}^2$            &               &               &     -24.614*  &               &               &     -24.719*  \\
+                    &               &               &    (13.771)   &               &               &    (13.740)   \\
+interaction\_sq      &               &               &      31.871** &               &               &      32.778** \\
+                    &               &               &    (15.138)   &               &               &    (15.105)   \\
 \midrule
 Controls   & No			& No			& No 	& Yes 		& Yes 		& Yes  \\
 Mean of dependent variable&        0.11   &        0.11   &        0.11   &        0.11   &        0.11   &        0.11   \\
 N                   &      89,967   &      89,967   &      89,967   &      89,967   &      89,967   &      89,967   \\
 \midrule
 \textit{Panel B: $BAC \in [0.055, 0.105]$ } & & & & & &		\\
-DUI                 &      -0.022***&      -0.020***&      -0.017** &      -0.022***&      -0.021***&      -0.017** \\
-                    &     (0.006)   &     (0.006)   &     (0.007)   &     (0.006)   &     (0.006)   &     (0.007)   \\
-$\tilde{BAC}$             &       0.216   &      -0.150   &      -0.150   &       0.188   &      -0.199   &      -0.199   \\
-                    &     (0.201)   &     (0.383)   &     (0.383)   &     (0.201)   &     (0.383)   &     (0.383)   \\
-Interaction         &               &       0.523   &      -0.152   &               &       0.552   &      -0.123   \\
-                    &               &     (0.450)   &     (1.071)   &               &     (0.449)   &     (1.070)   \\
-Interaction sq.      &               &               &      25.295   &               &               &      25.287   \\
-                    &               &               &    (36.617)   &               &               &    (36.574)   \\
+DUI                 &      -0.022***&      -0.020***&      -0.015*  &      -0.022***&      -0.021***&      -0.014*  \\
+                    &     (0.006)   &     (0.006)   &     (0.008)   &     (0.006)   &     (0.006)   &     (0.008)   \\
+$\tilde{BAC}$             &       0.216   &      -0.150   &      -0.984   &       0.188   &      -0.199   &      -1.201   \\
+                    &     (0.201)   &     (0.383)   &     (1.346)   &     (0.201)   &     (0.383)   &     (1.344)   \\
+Interaction         &               &       0.523   &       0.682   &               &       0.552   &       0.879   \\
+                    &               &     (0.450)   &     (1.677)   &               &     (0.449)   &     (1.675)   \\
+$\tilde{BAC}^2$            &               &               &     -38.124   &               &               &     -45.804   \\
+                    &               &               &    (58.838)   &               &               &    (58.762)   \\
+Interaction sq.      &               &               &      63.419   &               &               &      71.090   \\
+                    &               &               &    (69.302)   &               &               &    (69.218)   \\
 \midrule
 Controls   & No			& No			& No 	& Yes 		& Yes 		& Yes  \\
 Mean of dependent variable&        0.11   &        0.11   &        0.11   &        0.11   &        0.11   &        0.11   \\
